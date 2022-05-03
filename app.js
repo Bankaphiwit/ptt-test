@@ -26,7 +26,7 @@ app.get("/same-reverse", (req, res) => {
     let q = url.parse(req.url, true).query;
     let str = q.str ? q.str : "deleveled";
     let sameReverse = utils.isSameReverse(str) ? "Yes" : "No";
-    let content = `String ${str} is same reverse ${duplicateReverse}`;
+    let content = `String ${str} is same reverse ${sameReverse}`;
     res.send(content);
 });
 /*4.*/
