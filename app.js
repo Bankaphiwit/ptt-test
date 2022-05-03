@@ -9,7 +9,9 @@ app.get("/prime-number", (req, res) => {
     let start = q.start ? q.start : 1;
     let end = q.end ? q.end : 10000000;
     let primeNumber = utils.primeNumber(start, end);
-    let content = `Total: ${primeNumber.length} <br/>`;
+    let content = `Start: ${start} <br/>`;
+    content += `End: ${start} <br/>`;
+    content += `Total: ${primeNumber.length} <br/>`;
     content += primeNumber.join(", ");
     res.send(content);
 });
